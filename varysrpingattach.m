@@ -67,7 +67,7 @@ dyn.catch = 0;
 
 % Fds=1:8;
 % Fss=1:8;
-velList=400; kdetList=0.5;Fds=1;Fss=1;
+velList=500; kdetList=0.5;Fds=1;Fss=1;
 kintypes=[1 2];
 dynspList=[0.3 0.1 0.065 0.03 0.01 0.003 0.001]; %default0.065
 kattList=[1 2 5 10 20 50]; %default 5
@@ -101,7 +101,7 @@ for ii = 1:length(kdetList)
                                         dyn.kback=kbackLists(ikback);
                                         dyn.kfor=velList(jj)/8+dyn.kback;
                     
- %%%%%%%%%%%%%%%%%%%%MC run                   
+ %%%%%%%%%%%%%%%%%%%%MC run   
                     parfor irun = 1:runs
                         %tic
                         Simu = tOhashi34_varykforvel_mod(F,dyn,kin,category);
